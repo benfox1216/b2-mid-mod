@@ -4,6 +4,6 @@
 
 <h2>Actors In This Movie:</h2>
 
-<% @movie.actors.each do |actor| %>
-  <p><%= link_to "#{actor.name}", "/actors/#{actor.id}" %></p>
+<% @movie.actors_sorted.each do |actor| %>
+  <p><%= link_to "#{actor.name}", "/actors/#{actor.id}" %>, age: <% actor.age %></p>
 <% end %>

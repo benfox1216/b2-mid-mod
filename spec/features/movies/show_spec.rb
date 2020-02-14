@@ -23,6 +23,10 @@ describe 'As a user' do
       expect(page).to have_content("#{@movie_1.name}")
       expect(page).to have_content("#{@movie_1.creation_year}")
       expect(page).to have_content("#{@movie_1.genre}")
+      
+      expect(page).to have_link("#{@actor_1.name}")
+      expect(page).to have_link("#{@actor_2.name}")
+      expect(page).to have_link("#{@actor_3.name}")
     end
   end
 end
