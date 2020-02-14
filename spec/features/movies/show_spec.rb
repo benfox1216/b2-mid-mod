@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'As a user' do
-  describe 'when I visit an actor show page' do
+  describe 'when I visit an movie show page' do
     before :each do
       @studio_1 = Studio.create!(name: "Sweet Movies Studio")
       
@@ -18,7 +18,7 @@ describe 'As a user' do
       visit "/movies/#{@movie_1.id}"
     end
     
-    it "I see their name, age, and a list of the movies they're in" do
+    it "I see the movies name, creation date and genre, plus the actors sorted by age and their avg age" do
       expect(current_path).to eq("/movies/#{@movie_1.id}")
       expect(page).to have_content("#{@movie_1.name}")
       expect(page).to have_content("#{@movie_1.creation_year}")

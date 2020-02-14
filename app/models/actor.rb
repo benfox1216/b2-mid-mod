@@ -4,8 +4,4 @@ class Actor < ApplicationRecord
   
   has_many :movie_actors
   has_many :movies, through: :movie_actors
-  
-  def actor_movies
-    MovieActor.where(actor_id: self.id)
-  end
 end
