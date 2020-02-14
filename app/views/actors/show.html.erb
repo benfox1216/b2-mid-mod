@@ -1,0 +1,8 @@
+<header><%= @actor.name %></header>
+<h3><%= @actor.age %></h3>
+
+<h2>Movies They're In:</h2>
+
+<% @actor.movies.each do |movie| %>
+  <p><%= link_to "#{movie.name}", "/movies/#{movie.id}" %></p>
+<% end %>
