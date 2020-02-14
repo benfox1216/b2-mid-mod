@@ -1,0 +1,9 @@
+<header><%= @movie.name %></header>
+<h3><%= @movie.creation_year %></h3>
+<h3><%= @movie.genre %></h3>
+
+<h2>Actors In This Movie:</h2>
+
+<% @movie.actors.each do |actor| %>
+  <p><%= link_to "#{actor.name}", "/actors/#{actor.id}" %></p>
+<% end %>
