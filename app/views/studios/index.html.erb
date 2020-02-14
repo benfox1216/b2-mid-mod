@@ -1,0 +1,11 @@
+<header>Studios</header>
+
+<% @studios.each do |studio| %>
+  <section id='studio-<%= studio.id%>'>
+    <h2><%= studio.name %></h2>
+    
+    <% studio.movies.each do |movie| %>
+      <p><%= link_to "#{movie.name}", "/movies/#{movie.id}" %></p>
+    <% end %>
+  </section>
+<% end %>

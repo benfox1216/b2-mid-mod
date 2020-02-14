@@ -8,5 +8,4 @@ describe Studio do
   describe 'Relationships' do
 		it {should have_many :movies}
 	end
-
 end
