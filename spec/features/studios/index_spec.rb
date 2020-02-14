@@ -19,14 +19,14 @@ describe 'As a user' do
       
       within "#studio-#{@studio_1.id}" do
         expect(page).to have_content("#{@studio_1.name}")
-        expect(page).to have_link("@movie_1.name")
-        expect(page).to have_link("@movie_2.name")
+        expect(page).to have_link("#{@movie_1.name}")
+        expect(page).to have_link("#{@movie_2.name}")
       end
       
       within "#studio-#{@studio_2.id}" do
         expect(page).to have_content("#{@studio_2.name}")
-        expect(page).to have_link("@movie_3.name")
-        expect(page).to have_link("@movie_4.name")
+        expect(page).to have_link("#{@movie_3.name}")
+        expect(page).to have_link("#{@movie_4.name}")
       end
     end
   end
