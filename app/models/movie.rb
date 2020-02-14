@@ -10,4 +10,9 @@ class Movie < ApplicationRecord
   def actors_sorted
     self.actors.sort_by(&:age)
   end
+  
+  def avg_age_of_actors
+    ages = self.actors.select(:age)
+    ages.average(:age).to_i
+  end
 end

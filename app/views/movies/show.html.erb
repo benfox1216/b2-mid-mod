@@ -7,3 +7,5 @@
 <% @movie.actors_sorted.each do |actor| %>
   <p><%= link_to "#{actor.name}", "/actors/#{actor.id}" %>, age: <% actor.age %></p>
 <% end %>
+
+<h3>Average Age: <%= @movie.avg_age_of_actors %></h3>

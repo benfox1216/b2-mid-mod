@@ -27,6 +27,8 @@ describe 'As a user' do
       expect(page).to have_link("#{@actor_1.name}")
       expect(page).to have_link("#{@actor_2.name}")
       expect(page).to have_link("#{@actor_3.name}")
+      
+      expect(page).to have_content("Average Age: 38")
     end
   end
 end
